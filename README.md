@@ -27,6 +27,6 @@ Este é o meu portfólio pessoal, onde apresento informações sobre mim, meus p
 
 ## Autor
 
-- [Seu Nome](https://github.com/seu-usuario)
+- [Lincon-Cardoso](https://github.com/lincon-cardoso/)
 
 &copy; 2023 Meu Nome. Todos os direitos reservados.
