@@ -1,31 +1,108 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos gerais para o HTML e o corpo da página */
+html,
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
+  height: 100%;
+  font-family: Arial, sans-serif;
 }
 
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 1rem 0;
-    text-align: center;
+/* Estilos para imagens */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
-main {
-    padding: 2rem;
+/* Estilos para listas não ordenadas e ordenadas */
+ul,
+ol {
+  list-style: none;
 }
 
-section {
-    margin-bottom: 2rem;
+/* Estilos para links */
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1rem 0;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+/* Estilos para botões */
+button {
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+/* Estilos para tabelas */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Estilos do cabeçalho */
+.header {
+  background-color: #fff;
+  color: #333;
+  padding: 10px 0;
+  text-align: center;
+}
+
+/* Estilos para o container do cabeçalho */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+/* Estilos para o perfil no cabeçalho */
+.header-profile {
+  display: flex;
+  align-items: center;
+}
+
+/* Estilos para a foto do perfil */
+.profile-photo {
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+/* Estilos para a navegação no cabeçalho */
+.header-nav {
+  display: flex;
+  align-items: center;
+}
+
+/* Estilos para a lista de navegação */
+.nav-list {
+  display: flex;
+  gap: 30px;
+}
+
+/* Estilos para os itens da lista de navegação */
+.nav-item {
+  list-style: none;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Estilos para os links de navegação */
+.nav-link {
+  font-size: 16px;
+  color: #333;
+  padding: 5px 10px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Estilos para os links de navegação ao passar o mouse */
+.nav-link:hover {
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  color: #007bff;
 }
