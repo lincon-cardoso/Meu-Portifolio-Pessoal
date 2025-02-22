@@ -9,6 +9,11 @@
     <link rel="stylesheet" href="styles.css" />
     <!-- Link para o arquivo de scripts JavaScript -->
     <script src="scripts.js" defer></script>
+    <!-- Link para a fonte Poppins -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <!-- Cabeçalho da página -->
@@ -16,21 +21,20 @@
       <div class="header-container">
         <!-- Perfil no cabeçalho -->
         <div class="header-profile">
-          <img
-            src="/Meu-Portifolio-Pessoal/img/Rectangle 4137.png"
-            alt="Minha Foto"
-            class="profile-photo"
-          />
+          <div class="profile-photo"></div>
           <h1 class="profile-name">Meu Portfólio Pessoal</h1>
         </div>
         <!-- Navegação no cabeçalho -->
         <nav class="header-nav">
           <ul class="nav-list">
             <li class="nav-item">
-              <a href="#sobre" class="nav-link">Sobre Mim</a>
+              <a href="#home" class="nav-link">Home</a>
             </li>
             <li class="nav-item">
               <a href="#projetos" class="nav-link">Meus Projetos</a>
+            </li>
+            <li class="nav-item">
+              <a href="#sobre" class="nav-link">Sobre Mim</a>
             </li>
             <li class="nav-item">
               <a href="#contato" class="nav-link">Contato</a>
@@ -42,25 +46,63 @@
 
     <!-- Conteúdo principal da página -->
     <main>
-      <!-- Seção sobre mim -->
-      <!-- <section id="sobre">
-            <h2>Sobre Mim</h2>
-            <p>Escreva aqui uma breve descrição sobre você.</p>
-        </section>
-        <!-- Seção de projetos -->
-      <!-- <section id="projetos">
-            <h2>Meus Projetos</h2>
-            <p>Detalhe aqui alguns dos seus projetos mais importantes.</p>
-        </section>
-        <!-- Seção de contato -->
-      <!-- <section id="contato">
-            <h2>Contato</h2>
-            <p>Informações de contato ou um formulário de contato.</p>
-        </section> -->
+      <!-- Seção do portfólio -->
+      <section class="MeuPortifolio">
+        <h2 class="MeuPortifolio-title">Bem-vindo ao Meu Portfólio</h2>
+        <p class="MeuPortifolio-description">
+          Aqui você encontrará alguns dos meus projetos e habilidades.
+        </p>
+        <button class="hire-me-button">Contrate-me</button>
+      </section>
+
+      <!-- Seção dos projetos -->
+      <section class="cards-de-projetos">
+        <h2 class="projetos-title" id="projetos">Meus Projetos</h2>
+        <div class="cards-container">
+          <div class="card">
+            <div class="card-image"></div>
+            <h3 class="card-title">Projeto 1</h3>
+            <p class="card-description">01/2023</p>
+          </div>
+          <div class="card">
+            <div class="card-image"></div>
+            <h3 class="card-title">Projeto 2</h3>
+            <p class="card-description">05/2023</p>
+          </div>
+          <div class="card">
+            <div class="card-image"></div>
+            <h3 class="card-title">Projeto 3</h3>
+            <p class="card-description">09/2023</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Seção "Meus Projetos" -->
+      <section class="meu-projetos" aria-labelledby="meus-projetos-title">
+        <div class="conteudo-container">
+          <h2 id="meus-projetos-title">Meus Projetos</h2>
+          <p id="meus-projetos-paragrafo">
+            Aqui você encontrará alguns dos meus projetos e habilidades.
+          </p>
+          <button class="ver-mais-button" aria-label="Ver mais projetos">
+            Ver mais
+          </button>
+        </div>
+      </section>
     </main>
     <!-- Rodapé da página -->
     <footer>
-      <!-- <p>&copy; 2023 Meu Nome. Todos os direitos reservados.</p> -->
+      <div class="footer-container">
+        <p class="footer-text">
+          &copy; 2025 Seu Nome. Todos os direitos reservados.
+        </p>
+        <p class="redes-Sociais">Siga-me nas redes sociais</p>
+        <div class="social-icons">
+          <a href="#" class="social-icon">FB</a>
+          <a href="#" class="social-icon">TW</a>
+          <a href="#" class="social-icon">IG</a>
+        </div>
+      </div>
     </footer>
   </body>
 </html>
