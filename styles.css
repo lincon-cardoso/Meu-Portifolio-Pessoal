@@ -362,6 +362,11 @@ footer {
   margin-bottom: 20px;
 }
 
+.profile-name{
+  font-size: 1.9rem;
+  font-weight: 800;
+}
+
 /* Media Queries para Responsividade */
 @media (max-width: 1024px) {
   .header-container {
