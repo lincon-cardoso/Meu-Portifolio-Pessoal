@@ -10,6 +10,9 @@ html,
 body {
   height: 100%;
   font-family: "Poppins", Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Garante que o body ocupe toda a altura da viewport */
 }
 
 /* Estilos para imagens */
@@ -195,6 +198,7 @@ footer {
   color: #fff;
   padding: 20px 0;
   text-align: center;
+  margin-top: auto; /* Garante que o rodapé fique no fim da página */
 }
 
 .footer-container {
@@ -281,4 +285,128 @@ footer {
 .ver-mais-button:hover {
   background-color: #e64a19;
   color: #ff0;
+}
+
+/* Estilos para a seção "Contato" */
+.contato {
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.contato-title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.contato-description {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.contato-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.contato-form label {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.contato-form input,
+.contato-form textarea {
+  width: 100%;
+  max-width: 500px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.contato-button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  transition: background-color 0.3s, color 0.3s;
+  border: none;
+  cursor: pointer;
+}
+
+.contato-button:hover {
+  background-color: #0056b3;
+}
+
+/* Estilos para a seção "Sobre Mim" */
+.sobre-mim {
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.sobre-mim-title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.sobre-mim-description {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 1024px) {
+  .header-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0 10px; /* Reduzir o padding horizontal */
+    justify-content: center;
+    align-items: center;
+  }
+
+  .header-profile {
+    display: flex;
+    flex-direction: column; /* Coloca a foto abaixo do nome */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    height: auto; /* Ajusta a altura automaticamente */
+    width: 100%; /* Ocupa toda a largura disponível */
+    padding: 10px 0;
+    margin: 0; /* Remove o margin */
+    justify-content: center;
+    text-align: center;
+  }
+
+  .profile-photo {
+    margin-top: 10px; /* Adiciona espaço acima da foto */
+    height: 40px;
+    width: 40px;
+  }
+
+  .nav-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: auto; /* Ajusta a altura automaticamente */
+    width: 100%; /* Ocupa toda a largura disponível */
+    justify-content: center;
+    text-align: center;
+    align-items: center; /* Centraliza os itens horizontalmente */
+  }
+
+  .cards-container {
+    gap: 30px; /* Reduzir o espaçamento entre os cards em telas menores */
+  }
+
+  .card {
+    width: 100%; /* Cards ocupam 100% da largura em telas menores */
+  }
 }
