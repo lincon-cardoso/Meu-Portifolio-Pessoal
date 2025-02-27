@@ -110,20 +110,26 @@ table {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  margin: 90px;
-  gap: 30px;
+  flex-direction: column; 
+  gap: 20px;
+  width: 100vw;
+  padding: 50px 20px;
+  /* border: 2px solid #333; */
 }
 
 .MeuPortifolio-title {
   font-size: 2.5rem;
   margin-bottom: 10px;
   font-weight: 700;
+  
+  text-align: center;
+  width: 100vw;
 }
 
 .MeuPortifolio-description {
-  font-size: 1.2rem;
+  font-size: 1.0rem;
   line-height: 1.6; /* Aumentar espaçamento entre linhas */
+  text-align: center;
 }
 
 .hire-me-button {
@@ -208,6 +214,7 @@ footer {
   gap: 20px; /* Espaço entre elementos */
   padding: 20px;
   flex-direction: column;
+  
 }
 
 .footer-text {
@@ -248,8 +255,9 @@ footer {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin: 90px;
-  gap: 30px;
+  width: 100%; /* Ajusta a largura para ocupar todo o espaço disponível */
+  padding: 20px; /* Adiciona padding para espaçamento interno */
+  box-sizing: border-box; /* Inclui padding e border no cálculo da largura */
 }
 
 .conteudo-container {
@@ -257,18 +265,24 @@ footer {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin: 90px;
+  margin: 20px 0; /* Ajusta a margem para espaçamento externo */
   gap: 30px;
+  padding: 20px; /* Adiciona padding para espaçamento interno */
+  box-sizing: border-box; /* Inclui padding e border no cálculo da largura */
 }
 
 #meus-projetos-title {
   font-size: 2.5rem;
   margin-bottom: 10px;
   font-weight: 700;
+  text-align: center;
+  width: 100%; /* Ajusta a largura para ocupar todo o espaço disponível */
 }
 
 #meus-projetos-paragrafo {
   font-size: 1rem;
+  text-align: center; /* Centraliza o texto */
+  width: 100%; /* Ajusta a largura para ocupar todo o espaço disponível */
 }
 
 .ver-mais-button {
@@ -362,7 +376,7 @@ footer {
   margin-bottom: 20px;
 }
 
-.profile-name{
+.profile-name {
   font-size: 1.7rem;
   font-weight: 800;
 }
@@ -388,10 +402,17 @@ footer {
     margin: 0; /* Remove o margin */
     justify-content: center;
     text-align: center;
+    
+   
+  }
+ 
+  .profile-name{
+    font-size: 1.5rem;    
+    padding: 10px;
   }
 
   .profile-photo {
-    margin-top: 10px; /* Adiciona espaço acima da foto */
+    margin: 0 auto;
     height: 40px;
     width: 40px;
   }
