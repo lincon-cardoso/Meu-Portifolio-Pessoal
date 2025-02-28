@@ -110,24 +110,22 @@ table {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column; 
+  flex-direction: column;
   gap: 20px;
   width: 100vw;
   padding: 50px 20px;
-  /* border: 2px solid #333; */
 }
 
 .MeuPortifolio-title {
   font-size: 2.5rem;
   margin-bottom: 10px;
   font-weight: 700;
-  
   text-align: center;
   width: 100vw;
 }
 
 .MeuPortifolio-description {
-  font-size: 1.0rem;
+  font-size: 1rem;
   line-height: 1.6; /* Aumentar espaçamento entre linhas */
   text-align: center;
 }
@@ -148,15 +146,24 @@ table {
 
 /* Estilos para a seção dos projetos */
 .cards-de-projetos {
-  padding: 50px 20px;
   background-color: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centraliza verticalmente */
+  align-items: center; /* Centraliza horizontalmente */
 }
 
 .projetos-title {
+  height: auto;
+  width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  font-size: 2rem;
+  font-size: 4rem;
   margin-bottom: 30px;
   font-weight: 700;
+  margin: 30px;
 }
 
 .cards-container {
@@ -164,6 +171,10 @@ table {
   justify-content: center;
   gap: 20px;
   flex-wrap: wrap;
+  padding: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .card {
@@ -214,7 +225,6 @@ footer {
   gap: 20px; /* Espaço entre elementos */
   padding: 20px;
   flex-direction: column;
-  
 }
 
 .footer-text {
@@ -372,8 +382,12 @@ footer {
 
 .sobre-mim-description {
   font-size: 1.2rem;
-  line-height: 1.8;
+  line-height: 1.8; /* Aumenta a altura da linha para melhor legibilidade */
   margin-bottom: 20px;
+  text-align: justify; /* Justifica o texto para alinhamento uniforme */
+  max-width: 800px; /* Define uma largura máxima para o texto */
+  margin-left: auto; /* Centraliza horizontalmente */
+  margin-right: auto; /* Centraliza horizontalmente */
 }
 
 .profile-name {
@@ -402,12 +416,10 @@ footer {
     margin: 0; /* Remove o margin */
     justify-content: center;
     text-align: center;
-    
-   
   }
- 
-  .profile-name{
-    font-size: 1.5rem;    
+
+  .profile-name {
+    font-size: 1.5rem;
     padding: 10px;
   }
 
@@ -434,5 +446,9 @@ footer {
 
   .card {
     width: 100%; /* Cards ocupam 100% da largura em telas menores */
+  }
+
+  .projetos-title{
+    font-size: 2.5rem;
   }
 }
