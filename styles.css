@@ -2,7 +2,7 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: border-box; /* Inclui padding e borda no cálculo da largura */
 }
 
 /* Estilos gerais para HTML e body */
@@ -13,6 +13,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh; /* Garante que o body ocupe toda a altura da viewport */
+  overflow-x: hidden; /* Evita barra de rolagem horizontal */
 }
 
 /* Estilos para imagens */
@@ -60,6 +61,7 @@ table {
   justify-content: space-between;
   align-items: center;
   padding: 0 20px;
+  width: 100%; /* Garante que o cabeçalho ocupe toda a largura */
 }
 
 .header-profile {
@@ -112,7 +114,7 @@ table {
   align-items: center;
   flex-direction: column;
   gap: 20px;
-  width: 100vw;
+  width: 100%; /* Ajusta a largura para ocupar todo o espaço disponível */
   padding: 50px 20px;
 }
 
@@ -121,7 +123,7 @@ table {
   margin-bottom: 10px;
   font-weight: 700;
   text-align: center;
-  width: 100vw;
+  width: 100%; /* Ajusta a largura para ocupar todo o espaço disponível */
 }
 
 .MeuPortifolio-description {
@@ -151,30 +153,30 @@ table {
   flex-direction: column;
   justify-content: center; /* Centraliza verticalmente */
   align-items: center; /* Centraliza horizontalmente */
+  width: 100%; /* Garante que a seção ocupe toda a largura */
+  padding: 50px 20px;
 }
 
 .projetos-title {
-  height: auto;
-  width: 500px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   text-align: center;
-  font-size: 4rem;
+  font-size: 2.5rem;
   margin-bottom: 30px;
   font-weight: 700;
-  margin: 30px;
+  background-color: #007bff; /* Adiciona um fundo */
+  color: #fff; /* Define a cor do texto */
+  padding: 20px; /* Adiciona padding para espaçamento interno */
+  border-radius: 10px; /* Adiciona bordas arredondadas */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona sombra */
 }
 
 .cards-container {
   display: flex;
-  justify-content: center;
+  justify-content: center; /* Centraliza os cards horizontalmente */
   gap: 20px;
   flex-wrap: wrap;
-  padding: 20px;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
+  width: 100%; /* Garante que o contêiner ocupe toda a largura */
+  max-width: 1200px; /* Define uma largura máxima */
+  margin: 0 auto; /* Centraliza o contêiner */
 }
 
 .card {
@@ -216,6 +218,7 @@ footer {
   padding: 20px 0;
   text-align: center;
   margin-top: auto; /* Garante que o rodapé fique no fim da página */
+  width: 100%; /* Garante que o rodapé ocupe toda a largura */
 }
 
 .footer-container {
@@ -448,7 +451,7 @@ footer {
     width: 100%; /* Cards ocupam 100% da largura em telas menores */
   }
 
-  .projetos-title{
+  .projetos-title {
     font-size: 2.5rem;
   }
 }
