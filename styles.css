@@ -197,13 +197,12 @@ table {
   font-size: var(--font-size-large);
   margin-bottom: 30px;
   font-weight: 700;
-  background-color: var(--primary-color);
+  background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
   color: var(--white-color);
   padding: var(--padding-base);
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
 }
-
 .cards-container {
   display: flex;
   flex-wrap: wrap;
@@ -471,29 +470,57 @@ footer {
 }
 
 /* =======================================================================
-   Menu Horizontal
+   Menu Horizontal (Atualizado)
 ======================================================================== */
 .menu-horizontal {
-  width: 100%;
-  background-color: var(--primary-color);
-  padding: var(--padding-small);
-  margin-bottom: var(--padding-base);
-  text-align: center;
+    width: 100%;
+    background-color: transparent; /* Removido fundo azul */
+    padding: var(--padding-small);
+    margin-bottom: var(--padding-base);
+    text-align: center;
+    border-bottom: 1px solid #e0e0e0; /* Linha sutil de separação */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Sombra leve para realce */
 }
 
 .menu-horizontal .menu-list {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: var(--padding-small);
-  list-style: none;
-  padding: 0;
-  margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--padding-small);
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .menu-horizontal .menu-item {
-  margin: 0;
+    margin: 0;
+}
+
+/* Estilo dos links do menu */
+.menu-horizontal .menu-item a {
+    display: inline-block;
+    color: var(--text-color);
+    font-size: var(--font-size-small);
+    padding: var(--padding-small) var(--padding-base);
+    border-radius: var(--border-radius);
+    background-color: transparent; /* Fundo transparente */
+    transition: color 0.3s, transform 0.3s, border-bottom 0.3s;
+    text-decoration: none;
+}
+
+/* Estado hover e foco visível */
+.menu-horizontal .menu-item a:hover,
+.menu-horizontal .menu-item a:focus-visible {
+    color: var(--primary-color);
+    transform: scale(1.05);
+    border-bottom: 2px solid var(--primary-color);
+}
+
+/* Estado de foco para navegabilidade por teclado */
+.menu-horizontal .menu-item a:focus {
+    outline: none;
+    border-bottom: 2px solid var(--accent-color);
 }
 
 .menu-horizontal .menu-item a {
