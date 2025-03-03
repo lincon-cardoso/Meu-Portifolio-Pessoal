@@ -1,19 +1,50 @@
+/* Variáveis CSS */
+:root {
+  /* Cores principais */
+  --primary-color: #007bff;
+  --secondary-color: #0056b3;
+  --accent-color: #ff5722;
+  --background-color: #f9f9f9;
+  --text-color: #333;
+  --white-color: #fff;
+  --black-color: #000;
+
+  /* Tipografia */
+  --font-family: "Poppins", Arial, sans-serif;
+  --font-size-base: 16px;
+  --font-size-large: 2.5rem;
+  --font-size-medium: 1.2rem;
+  --font-size-small: 1rem;
+
+  /* Espaçamento */
+  --padding-base: 20px;
+  --padding-large: 50px;
+  --padding-small: 10px;
+
+  /* Estilos de borda e sombra */
+  --border-radius: 5px;
+  --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  /* Largura máxima */
+  --max-width: 1200px;
+}
+
 /* Reset CSS */
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; /* Inclui padding e borda no cálculo da largura */
+  box-sizing: border-box;
 }
 
 /* Estilos gerais para HTML e body */
 html,
 body {
   height: 100%;
-  font-family: "Poppins", Arial, sans-serif;
+  font-family: var(--font-family);
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Garante que o body ocupe toda a altura da viewport */
-  overflow-x: hidden; /* Evita barra de rolagem horizontal */
+  min-height: 100vh;
+  overflow-x: hidden;
 }
 
 /* Estilos para imagens */
@@ -50,9 +81,9 @@ table {
 
 /* Estilos para o cabeçalho */
 .header {
-  background-color: #fff;
-  color: #333;
-  padding: 10px 0;
+  background-color: var(--white-color);
+  color: var(--text-color);
+  padding: var(--padding-small) 0;
   text-align: center;
 }
 
@@ -60,8 +91,8 @@ table {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 20px;
-  width: 100%; /* Garante que o cabeçalho ocupe toda a largura */
+  padding: 0 var(--padding-base);
+  width: 100%;
 }
 
 .header-profile {
@@ -72,9 +103,9 @@ table {
 .profile-photo {
   width: 50px;
   height: 50px;
-  background-color: #000;
+  background-color: var(--black-color);
   border-radius: 50%;
-  margin-right: 10px;
+  margin-right: var(--padding-small);
 }
 
 .header-nav {
@@ -89,22 +120,22 @@ table {
 
 .nav-item {
   list-style: none;
-  font-size: 1.2rem;
+  font-size: var(--font-size-medium);
   font-weight: 500;
-  color: #333;
+  color: var(--text-color);
 }
 
 .nav-link {
-  font-size: 16px;
-  color: #333;
+  font-size: var(--font-size-small);
+  color: var(--text-color);
   padding: 5px 10px;
   transition: background-color 0.3s, color 0.3s;
 }
 
 .nav-link:hover {
   background-color: #f0f0f0;
-  border-radius: 5px;
-  color: #007bff;
+  border-radius: var(--border-radius);
+  color: var(--primary-color);
 }
 
 /* Estilos para a seção do portfólio */
@@ -114,75 +145,75 @@ table {
   align-items: center;
   flex-direction: column;
   gap: 20px;
-  width: 100%; /* Ajusta a largura para ocupar todo o espaço disponível */
-  padding: 50px 20px;
+  width: 100%;
+  padding: var(--padding-large) var(--padding-base);
 }
 
 .MeuPortifolio-title {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
+  font-size: var(--font-size-large);
+  margin-bottom: var(--padding-small);
   font-weight: 700;
   text-align: center;
-  width: 100%; /* Ajusta a largura para ocupar todo o espaço disponível */
+  width: 100%;
 }
 
 .MeuPortifolio-description {
-  font-size: 1rem;
-  line-height: 1.6; /* Aumentar espaçamento entre linhas */
+  font-size: var(--font-size-small);
+  line-height: 1.6;
   text-align: center;
 }
 
 .hire-me-button {
-  background-color: #007bff;
-  color: #fff;
-  padding: 10px 20px;
-  border-radius: 5px;
-  font-size: 1.2rem;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  padding: var(--padding-small) var(--padding-base);
+  border-radius: var(--border-radius);
+  font-size: var(--font-size-medium);
   transition: background-color 0.3s, color 0.3s;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adicionar sombra */
+  box-shadow: var(--box-shadow);
 }
 
 .hire-me-button:hover {
-  background-color: #0056b3;
+  background-color: var(--secondary-color);
 }
 
 /* Estilos para a seção dos projetos */
 .cards-de-projetos {
-  background-color: #f9f9f9;
+  background-color: var(--background-color);
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Centraliza verticalmente */
-  align-items: center; /* Centraliza horizontalmente */
-  width: 100%; /* Garante que a seção ocupe toda a largura */
-  padding: 50px 20px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: var(--padding-large) var(--padding-base);
 }
 
 .projetos-title {
   text-align: center;
-  font-size: 2.5rem;
+  font-size: var(--font-size-large);
   margin-bottom: 30px;
   font-weight: 700;
-  background-color: #007bff; /* Adiciona um fundo */
-  color: #fff; /* Define a cor do texto */
-  padding: 20px; /* Adiciona padding para espaçamento interno */
-  border-radius: 10px; /* Adiciona bordas arredondadas */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona sombra */
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  padding: var(--padding-base);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
 }
 
 .cards-container {
   display: flex;
-  justify-content: center; /* Centraliza os cards horizontalmente */
+  justify-content: center;
   gap: 20px;
   flex-wrap: wrap;
-  width: 100%; /* Garante que o contêiner ocupe toda a largura */
-  max-width: 1200px; /* Define uma largura máxima */
-  margin: 0 auto; /* Centraliza o contêiner */
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
 }
 
 .card {
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: var(--white-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
   overflow: hidden;
   width: 300px;
   text-align: center;
@@ -197,7 +228,7 @@ table {
 .card-image {
   width: 100%;
   height: 200px;
-  background-color: #000;
+  background-color: var(--black-color);
 }
 
 .card-title {
@@ -207,26 +238,26 @@ table {
 }
 
 .card-description {
-  font-size: 1rem;
+  font-size: var(--font-size-small);
   padding: 0 15px 15px;
 }
 
 /* Estilos para o rodapé */
 footer {
-  background-color: #333;
-  color: #fff;
-  padding: 20px 0;
+  background-color: var(--text-color);
+  color: var(--white-color);
+  padding: var(--padding-base) 0;
   text-align: center;
-  margin-top: auto; /* Garante que o rodapé fique no fim da página */
-  width: 100%; /* Garante que o rodapé ocupe toda a largura */
+  margin-top: auto;
+  width: 100%;
 }
 
 .footer-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px; /* Espaço entre elementos */
-  padding: 20px;
+  gap: var(--padding-small);
+  padding: var(--padding-base);
   flex-direction: column;
 }
 
@@ -244,9 +275,9 @@ footer {
 }
 
 .social-icon {
-  background-color: #fff;
-  color: #333;
-  padding: 10px;
+  background-color: var(--white-color);
+  color: var(--text-color);
+  padding: var(--padding-small);
   border-radius: 50%;
   text-align: center;
   width: 40px;
@@ -258,8 +289,8 @@ footer {
 }
 
 .social-icon:hover {
-  background-color: #007bff;
-  color: #fff;
+  background-color: var(--primary-color);
+  color: var(--white-color);
 }
 
 /* Estilos para a seção "Meus Projetos" */
@@ -268,9 +299,9 @@ footer {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 100%; /* Ajusta a largura para ocupar todo o espaço disponível */
-  padding: 20px; /* Adiciona padding para espaçamento interno */
-  box-sizing: border-box; /* Inclui padding e border no cálculo da largura */
+  width: 100%;
+  padding: var(--padding-base);
+  box-sizing: border-box;
 }
 
 .conteudo-container {
@@ -278,35 +309,35 @@ footer {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin: 20px 0; /* Ajusta a margem para espaçamento externo */
+  margin: 20px 0;
   gap: 30px;
-  padding: 20px; /* Adiciona padding para espaçamento interno */
-  box-sizing: border-box; /* Inclui padding e border no cálculo da largura */
+  padding: var(--padding-base);
+  box-sizing: border-box;
 }
 
 #meus-projetos-title {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
+  font-size: var(--font-size-large);
+  margin-bottom: var(--padding-small);
   font-weight: 700;
   text-align: center;
-  width: 100%; /* Ajusta a largura para ocupar todo o espaço disponível */
+  width: 100%;
 }
 
 #meus-projetos-paragrafo {
-  font-size: 1rem;
-  text-align: center; /* Centraliza o texto */
-  width: 100%; /* Ajusta a largura para ocupar todo o espaço disponível */
+  font-size: var(--font-size-small);
+  text-align: center;
+  width: 100%;
 }
 
 .ver-mais-button {
-  background-color: #ff5722; /* Mudar cor de fundo */
-  color: #fff;
+  background-color: var(--accent-color);
+  color: var(--white-color);
   padding: 15px 30px;
-  border-radius: 5px;
-  font-size: 1.2rem;
+  border-radius: var(--border-radius);
+  font-size: var(--font-size-medium);
   font-weight: bold;
   transition: background-color 0.3s, color 0.3s;
-  border: 2px solid #fff;
+  border: 2px solid var(--white-color);
 }
 
 .ver-mais-button:hover {
@@ -316,21 +347,21 @@ footer {
 
 /* Estilos para a seção "Contato" */
 .contato {
-  padding: 50px 20px;
-  background-color: #f9f9f9;
+  padding: var(--padding-large) var(--padding-base);
+  background-color: var(--background-color);
   text-align: center;
 }
 
 .contato-title {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
+  font-size: var(--font-size-large);
+  margin-bottom: var(--padding-base);
   font-weight: 700;
 }
 
 .contato-description {
-  font-size: 1.2rem;
+  font-size: var(--font-size-medium);
   line-height: 1.6;
-  margin-bottom: 20px;
+  margin-bottom: var(--padding-base);
 }
 
 .contato-form {
@@ -341,7 +372,7 @@ footer {
 }
 
 .contato-form label {
-  font-size: 1rem;
+  font-size: var(--font-size-small);
   font-weight: 600;
 }
 
@@ -349,48 +380,48 @@ footer {
 .contato-form textarea {
   width: 100%;
   max-width: 500px;
-  padding: 10px;
+  padding: var(--padding-small);
   border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 1rem;
+  border-radius: var(--border-radius);
+  font-size: var(--font-size-small);
 }
 
 .contato-button {
-  background-color: #007bff;
-  color: #fff;
-  padding: 10px 20px;
-  border-radius: 5px;
-  font-size: 1.2rem;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  padding: var(--padding-small) var(--padding-base);
+  border-radius: var(--border-radius);
+  font-size: var(--font-size-medium);
   transition: background-color 0.3s, color 0.3s;
   border: none;
   cursor: pointer;
 }
 
 .contato-button:hover {
-  background-color: #0056b3;
+  background-color: var(--secondary-color);
 }
 
 /* Estilos para a seção "Sobre Mim" */
 .sobre-mim {
-  padding: 50px 20px;
-  background-color: #f9f9f9;
+  padding: var(--padding-large) var(--padding-base);
+  background-color: var(--background-color);
   text-align: center;
 }
 
 .sobre-mim-title {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
+  font-size: var(--font-size-large);
+  margin-bottom: var(--padding-base);
   font-weight: 700;
 }
 
 .sobre-mim-description {
-  font-size: 1.2rem;
-  line-height: 1.8; /* Aumenta a altura da linha para melhor legibilidade */
-  margin-bottom: 20px;
-  text-align: justify; /* Justifica o texto para alinhamento uniforme */
-  max-width: 800px; /* Define uma largura máxima para o texto */
-  margin-left: auto; /* Centraliza horizontalmente */
-  margin-right: auto; /* Centraliza horizontalmente */
+  font-size: var(--font-size-medium);
+  line-height: 1.8;
+  margin-bottom: var(--padding-base);
+  text-align: justify;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .profile-name {
@@ -403,27 +434,27 @@ footer {
   .header-container {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    padding: 0 10px; /* Reduzir o padding horizontal */
+    gap: var(--padding-small);
+    padding: 0 var(--padding-small);
     justify-content: center;
     align-items: center;
   }
 
   .header-profile {
     display: flex;
-    flex-direction: column; /* Coloca a foto abaixo do nome */
-    align-items: center; /* Centraliza os itens horizontalmente */
-    height: auto; /* Ajusta a altura automaticamente */
-    width: 100%; /* Ocupa toda a largura disponível */
-    padding: 10px 0;
-    margin: 0; /* Remove o margin */
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    width: 100%;
+    padding: var(--padding-small) 0;
+    margin: 0;
     justify-content: center;
     text-align: center;
   }
 
   .profile-name {
     font-size: 1.5rem;
-    padding: 10px;
+    padding: var(--padding-small);
   }
 
   .profile-photo {
@@ -435,23 +466,23 @@ footer {
   .nav-list {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    height: auto; /* Ajusta a altura automaticamente */
-    width: 100%; /* Ocupa toda a largura disponível */
+    gap: var(--padding-small);
+    height: auto;
+    width: 100%;
     justify-content: center;
     text-align: center;
-    align-items: center; /* Centraliza os itens horizontalmente */
+    align-items: center;
   }
 
   .cards-container {
-    gap: 30px; /* Reduzir o espaçamento entre os cards em telas menores */
+    gap: 30px;
   }
 
   .card {
-    width: 100%; /* Cards ocupam 100% da largura em telas menores */
+    width: 100%;
   }
 
   .projetos-title {
-    font-size: 2.5rem;
+    font-size: var(--font-size-large);
   }
 }
