@@ -1,6 +1,8 @@
-/* Variáveis CSS */
+/* =======================================================================
+   Variáveis Globais
+======================================================================== */
 :root {
-  /* Cores principais */
+  /* Cores */
   --primary-color: #007bff;
   --secondary-color: #0056b3;
   --accent-color: #ff5722;
@@ -21,7 +23,7 @@
   --padding-large: 50px;
   --padding-small: 10px;
 
-  /* Estilos de borda e sombra */
+  /* Borda e sombra */
   --border-radius: 5px;
   --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
@@ -29,14 +31,15 @@
   --max-width: 1200px;
 }
 
-/* Reset CSS */
+/* =======================================================================
+   Reset & Estilos Globais
+======================================================================== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Estilos gerais para HTML e body */
 html,
 body {
   height: 100%;
@@ -47,39 +50,36 @@ body {
   overflow-x: hidden;
 }
 
-/* Estilos para imagens */
 img {
   max-width: 100%;
   height: auto;
   display: block;
 }
 
-/* Estilos para listas */
 ul,
 ol {
   list-style: none;
 }
 
-/* Estilos para links */
 a {
   text-decoration: none;
   color: inherit;
 }
 
-/* Estilos para botões */
 button {
   cursor: pointer;
   background: none;
   border: none;
 }
 
-/* Estilos para tabelas */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* Estilos para o cabeçalho */
+/* =======================================================================
+   Cabeçalho (Header)
+======================================================================== */
 .header {
   background-color: var(--white-color);
   color: var(--text-color);
@@ -119,7 +119,6 @@ table {
 }
 
 .nav-item {
-  list-style: none;
   font-size: var(--font-size-medium);
   font-weight: 500;
   color: var(--text-color);
@@ -138,12 +137,13 @@ table {
   color: var(--primary-color);
 }
 
-/* Estilos para a seção do portfólio */
+/* =======================================================================
+   Seção do Portfólio (Home)
+======================================================================== */
 .MeuPortifolio {
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
+  align-items: center;
   gap: 20px;
   width: 100%;
   padding: var(--padding-large) var(--padding-base);
@@ -163,6 +163,9 @@ table {
   text-align: center;
 }
 
+/* =======================================================================
+   Botão de Ação
+======================================================================== */
 .hire-me-button {
   background-color: var(--primary-color);
   color: var(--white-color);
@@ -177,12 +180,13 @@ table {
   background-color: var(--secondary-color);
 }
 
-/* Estilos para a seção dos projetos */
+/* =======================================================================
+   Seção dos Projetos
+======================================================================== */
 .cards-de-projetos {
   background-color: var(--background-color);
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   width: 100%;
   padding: var(--padding-large) var(--padding-base);
@@ -202,9 +206,9 @@ table {
 
 .cards-container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
-  flex-wrap: wrap;
   width: 100%;
   max-width: var(--max-width);
   margin: 0 auto;
@@ -242,7 +246,9 @@ table {
   padding: 0 15px 15px;
 }
 
-/* Estilos para o rodapé */
+/* =======================================================================
+   Rodapé (Footer)
+======================================================================== */
 footer {
   background-color: var(--text-color);
   color: var(--white-color);
@@ -254,11 +260,10 @@ footer {
 
 .footer-container {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
   gap: var(--padding-small);
   padding: var(--padding-base);
-  flex-direction: column;
 }
 
 .footer-text {
@@ -293,26 +298,22 @@ footer {
   color: var(--white-color);
 }
 
-/* Estilos para a seção "Meus Projetos" */
-.meu-projetos {
+/* =======================================================================
+   Seção "Meus Projetos" (Conteúdo Específico)
+======================================================================== */
+.meu-projetos,
+.conteudo-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
+  align-items: center;
   width: 100%;
   padding: var(--padding-base);
   box-sizing: border-box;
 }
 
 .conteudo-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
   margin: 20px 0;
   gap: 30px;
-  padding: var(--padding-base);
-  box-sizing: border-box;
 }
 
 #meus-projetos-title {
@@ -345,7 +346,9 @@ footer {
   color: #ff0;
 }
 
-/* Estilos para a seção "Contato" */
+/* =======================================================================
+   Seção "Contato"
+======================================================================== */
 .contato {
   padding: var(--padding-large) var(--padding-base);
   background-color: var(--background-color);
@@ -401,7 +404,9 @@ footer {
   background-color: var(--secondary-color);
 }
 
-/* Estilos para a seção "Sobre Mim" */
+/* =======================================================================
+   Seção "Sobre Mim"
+======================================================================== */
 .sobre-mim {
   padding: var(--padding-large) var(--padding-base);
   background-color: var(--background-color);
@@ -420,69 +425,96 @@ footer {
   margin-bottom: var(--padding-base);
   text-align: justify;
   max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
 }
 
-.profile-name {
-  font-size: 1.7rem;
-  font-weight: 800;
-}
-
-/* Media Queries para Responsividade */
+/* =======================================================================
+   Media Queries para Responsividade
+======================================================================== */
 @media (max-width: 1024px) {
   .header-container {
-    display: flex;
     flex-direction: column;
     gap: var(--padding-small);
     padding: 0 var(--padding-small);
-    justify-content: center;
     align-items: center;
   }
-
   .header-profile {
-    display: flex;
     flex-direction: column;
     align-items: center;
-    height: auto;
-    width: 100%;
     padding: var(--padding-small) 0;
-    margin: 0;
-    justify-content: center;
     text-align: center;
   }
-
   .profile-name {
     font-size: 1.5rem;
     padding: var(--padding-small);
   }
-
   .profile-photo {
     margin: 0 auto;
     height: 40px;
     width: 40px;
   }
-
   .nav-list {
-    display: flex;
     flex-direction: column;
     gap: var(--padding-small);
-    height: auto;
     width: 100%;
-    justify-content: center;
-    text-align: center;
     align-items: center;
   }
-
   .cards-container {
     gap: 30px;
   }
-
   .card {
     width: 100%;
   }
-
   .projetos-title {
     font-size: var(--font-size-large);
   }
+}
+
+/* =======================================================================
+   Menu Horizontal
+======================================================================== */
+.menu-horizontal {
+  width: 100%;
+  background-color: var(--primary-color);
+  padding: var(--padding-small);
+  margin-bottom: var(--padding-base);
+  text-align: center;
+}
+
+.menu-horizontal .menu-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--padding-small);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-horizontal .menu-item {
+  margin: 0;
+}
+
+.menu-horizontal .menu-item a {
+  display: inline-block;
+  color: var(--white-color);
+  font-size: var(--font-size-small);
+  padding: var(--padding-small) var(--padding-base);
+  border-radius: var(--border-radius);
+  transition: background-color 0.3s, transform 0.3s;
+  text-decoration: none;
+  background-color: var(--secondary-color); /* Utilizando variável para cor padrão */
+  box-shadow: var(--box-shadow);
+}
+
+.menu-horizontal .menu-item a:hover,
+.menu-horizontal .menu-item a:focus-visible {
+  background-color: var(--accent-color);
+  transform: scale(1.05);
+}
+
+.menu-horizontal .menu-item a:focus {
+  outline: 3px solid var(--accent-color);
+  outline-offset: 2px;
 }
