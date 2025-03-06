@@ -4,7 +4,7 @@
     <!-- Metadados da página -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sobre Mim - Meu Portfólio Pessoal</title>
+    <title>Sobre Mim - Portfólio</title>
     <!-- Link para o arquivo de estilos CSS -->
     <link rel="stylesheet" href="styles.css" />
     <!-- Link para o arquivo de scripts JavaScript -->
@@ -14,6 +14,8 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
   </head>
   <body>
     <!-- Cabeçalho da página -->
@@ -34,7 +36,7 @@
               <a href="meuProjetos.html" class="nav-link">Meus Projetos</a>
             </li>
             <li class="nav-item">
-              <a href="sobre.html" class="nav-link">Sobre Mim</a>
+              <a href="sobre.html" class="nav-link active">Sobre Mim</a>
             </li>
             <li class="nav-item">
               <a href="contato.html" class="nav-link">Contato</a>
@@ -46,23 +48,49 @@
 
     <!-- Conteúdo principal da página -->
     <main>
-      <!-- Seção "Sobre Mim" -->
+      <!-- Seção Sobre Mim -->
       <section class="sobre-mim">
         <h2 class="sobre-mim-title">Sobre Mim</h2>
-        <p class="sobre-mim-description">
-          Sou um desenvolvedor front-end em formação, focado em React,
-          TypeScript e Next.js. Busco oportunidades para aplicar meu
-          conhecimento na criação de interfaces modernas e acessíveis. Tenho
-          estudado boas práticas de desenvolvimento, incluindo performance,
-          acessibilidade e integração com APIs. Atualmente, estou desenvolvendo
-          projetos próprios para fortalecer minhas habilidades e explorar novas
-          tecnologias.<br><br> 💻 Tecnologias  que estou aprendendo: React, TypeScript,
-          Next.js, Tailwind CSS, Git.<br><br>🚀 Objetivo: Conseguir minha primeira
-          oportunidade como desenvolvedor e contribuir para projetos
-          desafiadores.  <br><br>📈 Aprendizado contínuo: Participando de cursos online,
-          desafios de código e construindo pequenos projetos para aprimorar
-          minhas habilidades.
-        </p>
+        <div class="container">
+          <div class="sobre-mim-content">
+            <div class="sobre-mim-image">
+              <!-- Imagem de perfil aumentada -->
+              <div class="profile-photo-large"></div>
+            </div>
+            <div class="sobre-mim-text">
+              <p class="sobre-mim-description">
+                Olá! Sou Lincon Cardoso, um desenvolvedor web apaixonado por criar soluções digitais inovadoras. Minha jornada com programação começou há 5 anos quando descobri a fascinante possibilidade de transformar ideias em interfaces funcionais.
+              </p>
+              <p class="sobre-mim-description">
+                Especializo-me em desenvolvimento <strong>frontend</strong> e <strong>backend</strong>, utilizando tecnologias como <strong>HTML5</strong>, <strong>CSS3</strong>, <strong>JavaScript</strong>, <strong>React</strong>, <strong>Node.js</strong> e <strong>MongoDB</strong>. Tenho experiência com sites responsivos, aplicações web e desenvolvimento de APIs.
+              </p>
+              <p class="sobre-mim-description">
+                Meu objetivo é criar experiências digitais que não apenas pareçam excelentes, mas também ofereçam alto desempenho e usabilidade. Acredito que um bom código é aquele que equilibra inovação técnica com experiência do usuário.
+              </p>
+              
+              <div class="skills-container">
+                <h3>Minhas habilidades</h3>
+                <div class="skills-grid">
+                  <div class="skill-item">HTML5</div>
+                  <div class="skill-item">CSS3</div>
+                  <div class="skill-item">JavaScript</div>
+                  <div class="skill-item">React</div>
+                  <div class="skill-item">Node.js</div>
+                  <div class="skill-item">MongoDB</div>
+                  <div class="skill-item">Git</div>
+                  <div class="skill-item">UI/UX</div>
+                  <div class="skill-item">Responsive Design</div>
+                  <div class="skill-item">RESTful API</div>
+                </div>
+              </div>
+              
+              <div class="cta-container">
+                <a href="contato.html" class="btn btn-primary">Entre em contato</a>
+                <a href="#" class="btn btn-outline">Baixar currículo</a>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
 
@@ -74,9 +102,21 @@
         </p>
         <p class="redes-Sociais">Siga-me nas redes sociais</p>
         <div class="social-icons">
-          <a href="#" class="social-icon">FB</a>
-          <a href="#" class="social-icon">TW</a>
-          <a href="#" class="social-icon">IG</a>
+          <a href="#" class="social-icon" aria-label="Facebook">
+            <i class="fab fa-facebook-f"></i> Facebook
+          </a>
+          <a href="#" class="social-icon" aria-label="Twitter">
+            <i class="fab fa-twitter"></i> Twitter
+          </a>
+          <a href="#" class="social-icon" aria-label="Instagram">
+            <i class="fab fa-instagram"></i> Instagram
+          </a>
+          <a href="#" class="social-icon" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i> LinkedIn
+          </a>
+          <a href="#" class="social-icon" aria-label="GitHub">
+            <i class="fab fa-github"></i> GitHub
+          </a>
         </div>
       </div>
     </footer>
