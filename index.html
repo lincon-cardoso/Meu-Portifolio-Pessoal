@@ -17,8 +17,13 @@
 </head>
 
 <body>
+  <!-- Loader de Página -->
+  <div class="page-loader">
+    <div class="loader-spinner"></div>
+  </div>
+
   <!-- Cabeçalho da página -->
-  <header class="header">
+  <header class="header fade-in">
     <div class="header-container">
       <!-- Perfil no cabeçalho -->
       <div class="header-profile">
@@ -48,19 +53,18 @@
   <!-- Conteúdo principal da página -->
   <main>
     <!-- Seção do Portfólio (Hero) -->
-    <section class="MeuPortifolio">
+    <section class="MeuPortifolio fade-in">
       <h1 class="MeuPortifolio-title">
         Desenvolvedor Web <span class="text-gradient">Fullstack</span>
       </h1>
       <p class="MeuPortifolio-description">
-        Criando experiências digitais atraentes e funcionais com as
-        tecnologias mais modernas do mercado.
+        Criando experiências digitais atraentes e funcionais com as tecnologias mais modernas do mercado.
       </p>
       <a href="contato.html" class="hire-me-button">Contrate-me</a>
     </section>
 
     <!-- Seção dos Projetos em Destaque -->
-    <section class="cards-de-projetos">
+    <section class="cards-de-projetos fade-in">
       <h2 class="projetos-title">Projetos em Destaque</h2>
       <div class="cards-container">
         <!-- Card do Projeto 1 -->
@@ -68,8 +72,7 @@
           <div class="card-image"></div>
           <h3 class="card-title">E-commerce Responsivo</h3>
           <p class="card-description">
-            Site de vendas com design adaptável desenvolvido com React e
-            Node.js
+            Site de vendas com design adaptável desenvolvido com React e Node.js
           </p>
         </div>
 
@@ -90,6 +93,8 @@
             Aplicativo móvel para controle financeiro pessoal
           </p>
         </div>
+
+        <!-- Card extra (exemplo duplicado) -->
         <div class="card" data-category="mobile">
           <div class="card-image"></div>
           <h3 class="card-title">App de Finanças</h3>
@@ -106,7 +111,7 @@
   </main>
 
   <!-- Rodapé da página -->
-  <footer>
+  <footer class="fade-in">
     <div class="footer-container">
       <p class="footer-text">
         &copy; 2025 Lincon Cardoso. Todos os direitos reservados.
@@ -131,6 +136,13 @@
       </div>
     </div>
   </footer>
+
+  <!-- Script para esconder o loader após o carregamento -->
+  <script>
+    window.addEventListener('load', function () {
+      document.querySelector('.page-loader').classList.add('hidden');
+    });
+  </script>
 </body>
 
 </html>
